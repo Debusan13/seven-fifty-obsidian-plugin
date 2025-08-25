@@ -1,8 +1,161 @@
 /*
-
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
+Seven Fifty Words Plugin Styles
 */
+
+/* Status bar styling for better visibility */
+.status-bar-item {
+    font-weight: 500;
+    padding: 0 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Goal completion animation */
+.seven-fifty-complete {
+    animation: pulse-success 2s ease-in-out;
+}
+
+@keyframes pulse-success {
+    0% { background-color: transparent; }
+    50% { background-color: var(--color-green); opacity: 0.3; }
+    100% { background-color: transparent; }
+}
+
+/* Daily writing file specific styles */
+.seven-fifty-writing-file .cm-editor {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Progress indicator styles */
+.seven-fifty-progress-low {
+    color: red;
+}
+
+.seven-fifty-progress-low-med {
+    color: orange;
+}
+
+.seven-fifty-progress-medium {
+    color: yellow;
+}
+
+.seven-fifty-progress-med-high {
+    color: yellowgreen;
+}
+
+.seven-fifty-progress-high {
+    color: green;
+}
+
+/* Ribbon icon styling */
+.ribbon-icon.seven-fifty-icon {
+    color: purple;
+}
+
+.ribbon-icon.seven-fifty-icon:hover {
+    color: purple;
+    opacity: 0.8;
+}
+
+/* Writing Calendar Styles */
+.seven-fifty-calendar {
+    font-family: monospace;
+    line-height: 1.6;
+    margin: 1em 0;
+}
+
+.seven-fifty-month {
+    margin-bottom: 1.5em;
+}
+
+.seven-fifty-month h5 {
+    margin: 0 0 0.5em 0;
+    color: var(--text-accent);
+    font-weight: 600;
+}
+
+.seven-fifty-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    max-width: 600px;
+}
+
+.seven-fifty-day {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+/* Goal met - bright green background */
+.seven-fifty-day.seven-fifty-goal-met {
+    background-color: #4ade80;
+    color: #166534;
+    font-weight: 600;
+}
+
+/* Partial writing - yellow/orange background */
+.seven-fifty-day.seven-fifty-partial {
+    background-color: #fbbf24;
+    color: #92400e;
+}
+
+/* No writing - subtle gray background */
+.seven-fifty-day.seven-fifty-no-writing {
+    background-color: var(--background-modifier-border);
+    color: var(--text-muted);
+}
+
+/* Future dates - very light background */
+.seven-fifty-day.seven-fifty-future {
+    background-color: var(--background-secondary);
+    color: var(--text-faint);
+    opacity: 0.5;
+}
+
+/* Hover effects */
+.seven-fifty-day:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px var(--background-modifier-box-shadow);
+}
+
+/* Legend styles */
+span.seven-fifty-goal-met {
+    background-color: #4ade80;
+    color: #166534;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+span.seven-fifty-partial {
+    background-color: #fbbf24;
+    color: #92400e;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+span.seven-fifty-no-writing {
+    background-color: var(--background-modifier-border);
+    color: var(--text-muted);
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+}
+
+span.seven-fifty-future {
+    background-color: var(--background-secondary);
+    color: var(--text-faint);
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    opacity: 0.7;
+}
