@@ -12,7 +12,7 @@ export class StatsManager {
 
 	async createStatsPage() {
 		const folderPath = this.settings.folderPath;
-		const statsFilePath = `${folderPath}/Writing Statistics.md`;
+		const statsFilePath = `${folderPath}/📊 Writing Statistics.md`;
 
 		// Ensure the folder exists
 		const folder = this.app.vault.getAbstractFileByPath(folderPath);
@@ -43,7 +43,7 @@ export class StatsManager {
 		const entries = Object.entries(dailyWordCounts);
 		
 		if (entries.length === 0) {
-			return `# 📊 Writing Statistics
+			return `
 
 No writing sessions recorded yet. Start your first session to see statistics here!
 
@@ -81,9 +81,7 @@ No writing sessions recorded yet. Start your first session to see statistics her
 		}
 
 		// Generate content
-		let content = `# 📊 Writing Statistics
-
-*Last updated: ${new Date().toLocaleString()}*
+		let content = `*Last updated: ${new Date().toLocaleString()}*
 
 | Metric | Value |
 |--------|-------|
