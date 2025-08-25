@@ -1,7 +1,9 @@
 # Seven Fifty (Words) for Obsidian 📝
 I agree with basically everything in this [thread](https://forum.obsidian.md/t/750-words/18000). It's been a few years so I thought, why not, I'll build this.
-![alt text](image.png)
-# How to use
+
+<img src="image.png" width="500">
+
+## How to use
 ## Commands
 #### `Open Today's 750 Words`
 - Opens the note associated with the current date
@@ -14,21 +16,21 @@ I agree with basically everything in this [thread](https://forum.obsidian.md/t/7
 - Generates (or updates) a *Writing Statistics 📊* file 
 - Shows some stats, last 10 sessions, and writing calendar
 
-![alt text](image-1.png)
+<img src="image-1.png" height="750">
 
-## Settings
-#### Word Count Goal
+### Settings
+##### `Word Count Goal`
 Set your daily word count targe
-#### Writing Folder
+##### `Writing Folder`
 Folder where daily writing files will be stored
-#### Show Ribbon Icon
+##### `Show Ribbon Icon`
 Display a ribbon icon in the left sidebar for quick access to daily writing
 
-> [!WARNING]
-> #### Timeout Seconds
+> [!WARNING] Work In Progress
+> ##### `Timeout Seconds`
 > How many seconds before the writing timer pauses (for calculating writing rate
 
-# Future Features
+## Future Features
 - [ ] WPM timer and stats
 - [ ] integrate stats from [Novel Word Count](https://github.com/isaaclyman/novel-word-count-obsidian)
 - [ ] be a seciton under [Daily Notes](https://help.obsidian.md/plugins/daily-notes)
