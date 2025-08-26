@@ -24,10 +24,13 @@ export class StatsManager {
 		const statsContent = await this.generateStatsContent();
 
 		// Create or update the stats file
-		let statsFile = this.app.vault.getAbstractFileByPath(statsFilePath) as TFile;
-		if (!statsFile) {
+		const statsFileRef = this.app.vault.getAbstractFileByPath(statsFilePath);
+		let statsFile: TFile;
+		
+		if (!statsFileRef || !(statsFileRef instanceof TFile)) {
 			statsFile = await this.app.vault.create(statsFilePath, statsContent);
 		} else {
+			statsFile = statsFileRef;
 			await this.app.vault.modify(statsFile, statsContent);
 		}
 

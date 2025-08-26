@@ -114,13 +114,16 @@ export default class SevenFiftyPlugin extends Plugin {
 		}
 
 		const filePath = `${folderPath}/${fileName}`;
-		let file = this.app.vault.getAbstractFileByPath(filePath) as TFile;
+		const fileRef = this.app.vault.getAbstractFileByPath(filePath);
+		let file: TFile;
 
-		if (!file) {
+		if (!fileRef || !(fileRef instanceof TFile)) {
 			file = await this.app.vault.create(filePath, '');
+		} else {
+			file = fileRef;
 		}
 
-		const leaf = this.app.workspace.getUnpinnedLeaf();
+		const leaf = this.app.workspace.getLeaf());
 		await leaf.openFile(file);
 		
 		// Focus on the editor

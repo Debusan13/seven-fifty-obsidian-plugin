@@ -1,9 +1,9 @@
 {
 	"id": "seven-fifty",
 	"name": "Seven Fifty (Words)",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "Write your daily 750 Words in Obsidian",
+	"description": "Write your daily 750 Words",
 	"author": "Debusan13",
 	"authorUrl": "https://github.com/debusan13",
 	"fundingUrl": "",
